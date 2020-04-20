@@ -35,7 +35,6 @@
               "node_modules/jquery/dist/jquery.min.js",
               "node_modules/admin-lte/dist/js/adminlte.min.js",
               "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
-              "node_modules/jquery-knob/dist/jquery.knob.min.js",
               "node_modules/moment/min/moment.min.js"
             ]
           },
@@ -130,6 +129,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "angularadminlte3template"
+    }
+  },
+  "defaultProject": "angularadminlte3template",
+  "cli": {
+    "analytics": false
+  }
 }
