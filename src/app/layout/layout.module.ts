@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { LayoutRoutingModule } from './layout-routing.module';
@@ -18,7 +18,8 @@ import { NgScrollbarModule } from 'ngx-scrollbar';
     NgScrollbarModule
   ],
   exports: [
-    ContentComponent
+    ContentComponent,
+    BreadcrumbComponent
   ]
 })
-export class LayoutModule { }
+export class LayoutModule {}

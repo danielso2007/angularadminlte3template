@@ -7,7 +7,6 @@ import { Component, OnInit } from '@angular/core';
     <app-navbar></app-navbar>
     <app-sidebar></app-sidebar>
     <div class="content-wrapper">
-      <app-breadcrumb></app-breadcrumb>
       <section class="content">
         <div class="container-fluid">
           <router-outlet></router-outlet>
@@ -16,9 +15,6 @@ import { Component, OnInit } from '@angular/core';
     </div>
     <app-footer></app-footer>
   </div>
-  <script>
-    $.widget.bridge('uibutton', $.ui.button)
-  </script>
   `,
   styleUrls: ['./content.component.css']
 })

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dashboardv1',
@@ -9,12 +8,12 @@ import { Router } from '@angular/router';
 })
 export class Dashboardv1Component implements OnInit {
 
-  constructor(
-    private title: Title,
-    private router: Router) { }
+  public pageTitle = 'Dashboard';
+
+  constructor(private title: Title) { }
 
   ngOnInit(): void {
-    this.title.setTitle('Dashboard');
+    this.title.setTitle(this.pageTitle);
   }
 
 }

@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { CoreRoutingModule } from './core-routing.module';
@@ -12,4 +12,4 @@ import { ErrorPageComponent } from './components/error-page/error-page.component
     CoreRoutingModule
   ]
 })
-export class CoreModule { }
+export class CoreModule {}

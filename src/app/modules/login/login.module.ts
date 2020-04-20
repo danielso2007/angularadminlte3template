@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
@@ -18,4 +18,4 @@ import { NewRegisterComponent } from './new-register/new-register.component';
     LoginRoutingModule
   ]
 })
-export class LoginModule { }
+export class LoginModule {}

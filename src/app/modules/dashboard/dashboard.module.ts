@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { DashboardRoutingModule } from './dashboard-routing.module';
@@ -16,4 +16,4 @@ import { Dashboardv3Component } from './v3/dashboardv3.component';
     DashboardRoutingModule
   ]
 })
-export class DashboardModule { }
+export class DashboardModule {}
