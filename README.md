@@ -1,4 +1,15 @@
-# Angularadminlte3template
+![AngularCI](https://github.com/danielso2007/angularadminlte3template/workflows/AngularCI/badge.svg?branch=master)
+![GitHub package version](https://img.shields.io/github/package-json/v/danielso2007/angularadminlte3template.svg)
+[![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/danielso2007/angularadminlte3template.svg)](https://github.com/danielso2007/angularadminlte3template/pulls)
+[![GitHub issues](https://img.shields.io/github/issues/danielso2007/angularadminlte3template.svg)](https://github.com/danielso2007/angularadminlte3template/issues?q=is%3Aopen+is%3Aissue)
+![GitHub last commit](https://img.shields.io/github/last-commit/danielso2007/angularadminlte3template.svg)
+![GitHub contributors](https://img.shields.io/github/contributors/danielso2007/angularadminlte3template.svg)
+![GitHub top language](https://img.shields.io/github/languages/top/danielso2007/angularadminlte3template.svg)
+[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
+
+# Angular Adminlte3 Template
+
+Based on the original version [adminlte3] (https://adminlte.io/themes/v3/).
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.1.
 
