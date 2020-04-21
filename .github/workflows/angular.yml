@@ -1,0 +1,66 @@
+name: AngularCI
+
+on:
+  push:
+    branches:
+    - master
+    - develop
+    - 'release/**'
+    tags:        
+    - v*
+    paths-ignore:
+    - '**.md'
+  pull_request:
+    branches:
+    - master
+    - develop
+    - 'release/**'
+    tags:        
+    - v*
+
+jobs:
+  Test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [10.x, 12.x]
+    steps:
+    - uses: actions/checkout@v1
+    - name: Cache node modules
+      uses: actions/cache@v1
+      with:
+        path: ~/.npm
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-node-
+    - name: Node ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: npm install -g @angular/cli, npm install and npm run build
+      run: |
+        npm install -g --silent @angular/cli
+        npm install --silent
+  Build:
+    needs: Test
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [10.x, 12.x]
+    steps:
+    - uses: actions/checkout@v1
+    - name: Cache node modules
+      uses: actions/cache@v1
+      with:
+        path: ~/.npm
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-node-
+    - name: Node ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version}}
+    - name: npm install -g @angular/cli, npm install and npm run build
+      run: |
+        npm install -g --silent @angular/cli
+        npm ci
