@@ -3,8 +3,9 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
-  { path: 'dashboard', loadChildren: () => import('./modules/dashboard/dashboard.module').then(m => m.DashboardModule) },
   { path: 'login', loadChildren: () => import('./modules/login/login.module').then(m => m.LoginModule) },
+  { path: 'dashboard', loadChildren: () => import('./modules/dashboard/dashboard.module').then(m => m.DashboardModule) },
+  { path: 'widgets', loadChildren: () => import('./modules/widgets/widgets.module').then(m => m.WidgetsModule) },
   { path: 'core', loadChildren: () => import('./core/core.module').then(m => m.CoreModule) },
   { path: '**', redirectTo: 'core/404', pathMatch: 'full' }
 ];

@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { environment } from '../../../environments/environment';
-import { BreadcrumbItem } from './model/breadcrumb-item.model';
+import { BreadcrumbItem } from './models/breadcrumb-item.model';
 
 @Component({
   selector: 'app-breadcrumb',
@@ -29,7 +29,7 @@ import { BreadcrumbItem } from './model/breadcrumb-item.model';
 export class BreadcrumbComponent implements OnInit {
 
   @Input() title: String;
-  routerLinkHome:String[] = environment.routerLinkHome;
+  routerLinkHome: String[] = environment.routerLinkHome;
   items: BreadcrumbItem[] = [{
     title: undefined,
     link: environment.routerLinkHome,
@@ -37,11 +37,11 @@ export class BreadcrumbComponent implements OnInit {
     isHome: true
   }];
 
-  constructor(private activatedRoute:ActivatedRoute) {}
+  constructor(private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.title = this.title ? this.title : (this.activatedRoute.snapshot.data.title ? this.activatedRoute.snapshot.data.title : '');
-    
+
     this.items[0].title = this.title;
 
     if (this.activatedRoute.snapshot.data.items) {
@@ -49,8 +49,6 @@ export class BreadcrumbComponent implements OnInit {
         this.items.push(element)
       });
     }
-    //console.log(this.items);
-    //console.log(this.activatedRoute.snapshot.data);
   }
 
 }

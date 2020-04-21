@@ -11,8 +11,8 @@ const routes: Routes = [
     path: '', component: ContentComponent,
     children: [
       { path: 'v1', component: Dashboardv1Component, data: {title: 'Dashboard', items: [{title: 'Dashboard v1', link: undefined, isActive: true, isHome: false}]} },
-      { path: 'v2', component: Dashboardv2Component, data: {title: 'Dashboard', items: [{title: 'Dashboard v2', link: undefined, isActive: true, isHome: false}]}  },
-      { path: 'v3', component: Dashboardv3Component, data: {title: 'Dashboard', items: [{title: 'Dashboard v3', link: undefined, isActive: true, isHome: false}]}  }
+      { path: 'v2', component: Dashboardv2Component, data: {title: 'Dashboard v2', items: [{title: 'Dashboard v2', link: undefined, isActive: true, isHome: false}]}  },
+      { path: 'v3', component: Dashboardv3Component, data: {title: 'Dashboard v3', items: [{title: 'Dashboard v3', link: undefined, isActive: true, isHome: false}]}  }
     ]
   }
 ];
