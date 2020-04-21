@@ -9,7 +9,7 @@
 
 # Angular Adminlte3 Template
 
-Based on the original version [adminlte3] (https://adminlte.io/themes/v3/).
+Based on the original version [adminlte3](https://adminlte.io/themes/v3/).
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.1.
 
