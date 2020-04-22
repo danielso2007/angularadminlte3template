@@ -6,15 +6,119 @@
   <title></title>
   <base href="/">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,400i,500,600,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=block" rel="stylesheet">
+
+  <!-- Splash screen styles -->
+  <style>
+    body adminlte-splash-screen {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #343a40;
+      color: #FBFDFE;
+      z-index: 999999;
+      pointer-events: none;
+      opacity: 1;
+      visibility: visible;
+      transition: opacity 400ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    body adminlte-splash-screen img {
+      width: 120px;
+      max-width: 120px;
+    }
+
+    body adminlte-splash-screen .spinner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 40px;
+      width: 56px;
+    }
+
+    body adminlte-splash-screen .spinner>div {
+      width: 10px;
+      height: 32px;
+      background-color: #007bff;
+      border-radius: 0%;
+      display: inline-block;
+      -webkit-animation: treo-bouncedelay 1s infinite ease-in-out both;
+      animation: treo-bouncedelay 1s infinite ease-in-out both;
+    }
+
+    body adminlte-splash-screen .spinner .bounce1 {
+      -webkit-animation-delay: -0.32s;
+      animation-delay: -0.32s;
+    }
+
+    body adminlte-splash-screen .spinner .bounce2 {
+      -webkit-animation-delay: -0.16s;
+      animation-delay: -0.16s;
+    }
+
+    @-webkit-keyframes treo-bouncedelay {
+
+      0%,
+      80%,
+      100% {
+        -webkit-transform: scale(0)
+      }
+
+      40% {
+        -webkit-transform: scale(1.0)
+      }
+    }
+
+    @keyframes treo-bouncedelay {
+
+      0%,
+      80%,
+      100% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+      }
+
+      40% {
+        -webkit-transform: scale(1.0);
+        transform: scale(1.0);
+      }
+    }
+
+    body:not(.adminlte-splash-screen-hidden) {
+      overflow: hidden;
+    }
+
+    body.adminlte-splash-screen-hidden adminlte-splash-screen {
+      visibility: hidden;
+      opacity: 0;
+    }
+  </style>
+
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
-  <app-root></app-root>
+  <app-root>
+    <adminlte-splash-screen>
+      <img src="assets/img/AdminLTELogo.png"
+           alt="Treo logo">
+      <div class="spinner">
+          <div class="bounce1"></div>
+          <div class="bounce2"></div>
+          <div class="bounce3"></div>
+      </div>
+  </adminlte-splash-screen>
+
+  </app-root>
 </body>
 
 </html>
