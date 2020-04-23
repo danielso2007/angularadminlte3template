@@ -1,0 +1,1 @@
+https://github.com/bartosz-io/jwt-auth-node
