@@ -52,8 +52,8 @@
       background-color: #007bff;
       border-radius: 0%;
       display: inline-block;
-      -webkit-animation: treo-bouncedelay 1s infinite ease-in-out both;
-      animation: treo-bouncedelay 1s infinite ease-in-out both;
+      -webkit-animation: adminlte-bouncedelay 1s infinite ease-in-out both;
+      animation: adminlte-bouncedelay 1s infinite ease-in-out both;
     }
 
     body adminlte-splash-screen .spinner .bounce1 {
@@ -66,7 +66,7 @@
       animation-delay: -0.16s;
     }
 
-    @-webkit-keyframes treo-bouncedelay {
+    @-webkit-keyframes adminlte-bouncedelay {
 
       0%,
       80%,
@@ -79,7 +79,7 @@
       }
     }
 
-    @keyframes treo-bouncedelay {
+    @keyframes adminlte-bouncedelay {
 
       0%,
       80%,
@@ -94,10 +94,6 @@
       }
     }
 
-    body:not(.adminlte-splash-screen-hidden) {
-      overflow: hidden;
-    }
-
     body.adminlte-splash-screen-hidden adminlte-splash-screen {
       visibility: hidden;
       opacity: 0;
@@ -106,18 +102,16 @@
 
 </head>
 
-<body class="hold-transition sidebar-mini layout-fixed">
+<body class="sidebar-mini layout-fixed">
   <app-root>
     <adminlte-splash-screen>
-      <img src="assets/img/AdminLTELogo.png"
-           alt="Treo logo">
+      <img src="assets/img/AdminLTELogo.png" alt="Adminlte logo">
       <div class="spinner">
-          <div class="bounce1"></div>
-          <div class="bounce2"></div>
-          <div class="bounce3"></div>
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+        <div class="bounce3"></div>
       </div>
-  </adminlte-splash-screen>
-
+    </adminlte-splash-screen>
   </app-root>
 </body>
 
